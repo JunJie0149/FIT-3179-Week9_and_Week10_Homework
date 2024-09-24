@@ -1,4 +1,4 @@
-Country,Electricity Consumption (MWh),Yearly KWh Per Capita
+ï»¿Country,Electricity Consumption (MWh),Yearly KWh Per Capita
 China,"5,563,928,540","3,963"
 United States,"3,902,306,027","11,855"
 India,"1,136,513,420",846
@@ -112,7 +112,7 @@ State of Palestine,"6,489,490","1,401"
 Luxembourg,"6,474,520","11,096"
 North Macedonia,"6,420,220","3,274"
 Cameroon,"6,410,820",273
-Côte d'Ivoire,"6,244,940",240
+CÃ´te d'Ivoire,"6,244,940",240
 Mongolia,"5,932,180","1,951"
 El Salvador,"5,927,700",956
 Cambodia,"5,857,300",369
@@ -138,7 +138,7 @@ Jamaica,"2,847,300","1,013"
 Montenegro,"2,808,120","4,498"
 New Caledonia,"2,738,850","9,663"
 Mauritius,"2,726,320","2,110"
-Réunion,"2,551,920","2,958"
+RÃ©union,"2,551,920","2,958"
 Bhutan,"2,183,700","2,920"
 Malta,"2,122,020","4,661"
 Gabon,"2,070,800",986
