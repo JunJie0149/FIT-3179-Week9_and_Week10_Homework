@@ -1,4 +1,4 @@
-Country,Consumption ,Yearly_KWh_Per_Capita
+ï»¿Country,Consumption ,Yearly_KWh_Per_Capita
 China,5563928540,3963
 United States,3902306027,11855
 India,1136513420,846
@@ -112,7 +112,7 @@ State of Palestine,6489490,1401
 Luxembourg,6474520,11096
 North Macedonia,6420220,3274
 Cameroon,6410820,273
-Côte d'Ivoire,6244940,240
+CÃ´te d'Ivoire,6244940,240
 Mongolia,5932180,1951
 El Salvador,5927700,956
 Cambodia,5857300,369
@@ -138,7 +138,7 @@ Jamaica,2847300,1013
 Montenegro,2808120,4498
 New Caledonia,2738850,9663
 Mauritius,2726320,2110
-Réunion,2551920,2958
+RÃ©union,2551920,2958
 Bhutan,2183700,2920
 Malta,2122020,4661
 Gabon,2070800,986
