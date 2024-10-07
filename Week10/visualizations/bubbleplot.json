@@ -1,0 +1,107 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 500,
+    "title": "Electricity Generation Sources In Malaysia (2000 - 2021)",
+    "data": {
+    "url": "https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/Week10/dataset/electricity_generation_sources.csv"
+    },
+    "params": [
+        {
+            "name": "year_selection",
+            "value": 0,
+            "bind": {
+                "input": "range",
+                "min": 2000,
+                "max": 2021,
+                "step": 1,
+                "name": "Year"
+            }
+        }
+    ],
+    "transform": [
+        {"filter": "datum.Year >= year_selection"}
+    ],
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "quantitative",
+            "scale": {
+                "domain": [1999, 2022]
+            }
+        },
+        "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "title": "Electricity Generation (GWh)",
+            "scale": {
+                "domain": [1, 100000]
+            }
+        }
+    },
+    "layer": [
+        {
+            "mark": "circle",
+            "encoding": {
+                "color": {
+                    "field": "Source",
+                    "type": "nominal",
+                    "title": "Sources",
+                    "scale": {
+                        "domain": [
+                            "Biofuels", "Coal", "Hydro", "Natural gas", "Oil", "Solar PV", "Waste"
+                        ],
+                        "range": [
+                            "#225ea8", "#e31a1c", "#feb24c", "#c994c7", "#ae017e", "#005824", "#8c96c6"
+                        ]
+                    }
+                },
+                "opacity": {"value": 0.6},
+                "size": {
+                    "field": "Value",
+                    "type": "quantitative",
+                    "title": "Gigawatt Hour (GWh)",
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [20000, 40000, 60000, 80000, 100000],
+                        "range": [50, 100, 150, 200, 400, 600]
+                    },
+                    "legend": {
+                        "format": ".1s"
+                    }
+                },
+                "tooltip": [
+                    {"field": "Source", "type": "nominal", "title": "Source"},
+                    {"field": "Year", "type": "quantitative"},
+                    {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Generated (GWh)"}
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": -12,
+                "fontSize": 10,
+                "fontWeight": "bold"
+            },
+            "encoding": {
+                "text": {"field": "Source", "type": "nominal"},
+                "color": {"value": "black"},
+                "opacity": {
+                    "condition": {
+                        "test": "datum.Year == 2010 || datum.Year == 2021",
+                        "value": 1
+                    },
+                    "value": 0
+                },
+                "tooltip": [
+                    {"field": "Source", "type": "nominal", "title": "Source"},
+                    {"field": "Year", "type": "quantitative"},
+                    {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Generated (GWh)"}
+                ]
+            }
+        }
+    ]
+}
