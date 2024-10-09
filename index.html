@@ -20,8 +20,18 @@
         </div>
 
     <h1>Electricity Generation Sources in Malaysia</h1>
-        <div class="column1" 
-            <div id="bubbleplot"></div>
+        <div class = "column1" 
+            <div id = "bubbleplot_malaysia"></div>
+        </div>
+
+    <h1>Electricity Generation Sources (World)</h1>
+        <div class = "column1"
+            <div id = "bubbleplot_world"></div>
+        </div>
+
+    <h1>Electricity Consumption by Sector (Malaysia)</h1>
+        <div class = "column1"
+            <div id = "barchart_world"></div>
         </div>
     </div>
     
@@ -32,8 +42,18 @@
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
         
-        var spec2 = "Week10/visualizations/bubbleplot.json";
-        vegaEmbed("#bubbleplot", spec2).then(function (result) {
+        var spec2 = "A2/js/bubbleplot_sources_malaysia.json";
+        vegaEmbed("#bubbleplot_malaysia", spec2).then(function (result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+
+        var spec3 = "A2/js/bubbleplot_sources_world.json";
+            vegaEmbed("#bubbleplot_world", spec3).then(function (result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+
+        var spec4 = "A2/js/barchart_consumption_sector_malaysia.json";
+            vegaEmbed("#barchart_world", spec4).then(function (result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
     </script>
