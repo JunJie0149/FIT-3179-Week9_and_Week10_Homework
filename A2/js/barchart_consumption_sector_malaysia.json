@@ -1,0 +1,76 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url":"https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/A2/dataset/electricity_consumption_sector_malaysia.csv"
+    },
+    "width": 500,
+    "height": 500,
+    "padding": 10,
+    "params": [
+        {
+            "name": "sector_selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null, "Industry", "Transport", "Residential", "Commercial and public services", "Agriculture / forestry"
+                ],
+                "labels": [
+                    "Show All", "Industry", "Transport", "Residential", "Commercial and public services", "Agriculture / forestry"
+                ],
+                "name": "Sectors: "
+            }
+        },
+        {
+            "name": "year_selection",
+            "value": 0,
+            "bind": {
+                "input": "range",
+                "min": 2000,
+                "max": 2022,
+                "step": 1,
+                "name": "Year: "
+            }
+        }
+    ],
+    "transform": [
+        {"filter": "sector_selection == null || datum.Sector == sector_selection"},
+        {"filter": "datum.Year >= year_selection"}
+    ],
+    "encoding": {
+        "x": {
+            "field": "Value",
+            "type": "quantitative",
+            "title": "Electricity Consumption (TJ)"
+        },
+        "y": {
+            "field": "Sector",
+            "type": "nominal",
+            "title": "Sector"
+        }
+    },
+    "layer": [
+        {
+            "mark": "bar",
+            "encoding": {
+                "color": {
+                    "field": "Sector",
+                    "type": "nominal",
+                    "title": "Sectors",
+                    "scale": {
+                        "domain": [
+                            "Industry", "Transport", "Residential", "Commercial and public services", "Agriculture / forestry"
+                        ],
+                        "range": [
+                            "#225ea8", "#e31a1c", "#feb24c", "#c994c7", "#ae017e"
+                        ]
+                    }
+                },
+                "tooltip": [
+                    {"field": "Sector", "type": "nominal", "title": "Sector"},
+                    {"field": "Year", "type": "quantitative"},
+                    {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Consumed (TJ)"}
+                ]
+            }
+        }
+    ]
+}
