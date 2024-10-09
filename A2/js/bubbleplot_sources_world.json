@@ -1,0 +1,95 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 500,
+    "title": "Electricity Generation Sources Worldwide (2000 - 2022)",
+    "data": {
+    "url": "https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/A2/dataset/electricity_generation_sources_world.csv"
+    },
+    "params": [
+        {
+            "name": "source_selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null, "Biofuels", "Coal", "Hydro", "Natural gas", "Oil", "Solar PV", "Waste", "Nuclear", "Tide", "Wind", "Solar thermal", "Geothermal", "Other sources"
+                ],
+                "labels": [
+                    "Show All", "Biofuels", "Coal", "Hydro", "Natural Gas", "Oil", "Solar PV", "Waste", "Nuclear", "Tide", "Wind", "Solar Thermal", "Geothermal", "Other Sources"
+                ],
+                "name": "Sources: "
+            }
+        },
+        {
+            "name": "year_selection",
+            "value": 0,
+            "bind": {
+                "input": "range",
+                "min": 2000,
+                "max": 2022,
+                "step": 1,
+                "name": "Year: "
+            }
+        }
+    ],
+    "transform": [
+        {"filter": "source_selection == null || datum.Sources == source_selection"},
+        {"filter": "datum.Year >= year_selection"}
+    ],
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "quantitative",
+            "scale": {
+                "domain": [1999, 2023]
+            }
+        },
+        "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "title": "Electricity Generation (GWh)",
+            "scale": {
+                "domain": [1, 12000000]
+            }
+        }
+    },
+    "layer": [
+        {
+            "mark": "circle",
+            "encoding": {
+                "color": {
+                    "field": "Sources",
+                    "type": "nominal",
+                    "title": "Sources",
+                    "scale": {
+                        "domain": [
+                            "Biofuels", "Coal", "Hydro", "Natural gas", "Oil", "Solar PV", "Waste", "Nuclear", "Tide", "Wind", "Solar thermal", "Geothermal", "Other sources"
+                        ],
+                        "range": [
+                            "#225ea8", "#e31a1c", "#feb24c", "#c994c7", "#ae017e", "#005824", "#8c96c6", "#7a0177", "#4a1486", "#74c476", "#253494", "#7fcdbb", "#a50f15"
+                        ]
+                    }
+                },
+                "opacity": {"value": 0.6},
+                "size": {
+                    "field": "Value",
+                    "type": "quantitative",
+                    "title": "Gigawatt Hour (GWh)",
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [10, 1000, 100000, 1000000, 12000000],
+                        "range": [50, 100, 200, 400, 600]
+                    },
+                    "legend": {
+                        "format": ".1s"
+                    }
+                },
+                "tooltip": [
+                    {"field": "Sources", "type": "nominal", "title": "Source"},
+                    {"field": "Year", "type": "quantitative"},
+                    {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Generated (GWh)"}
+                ]
+            }
+        }
+    ]
+}
