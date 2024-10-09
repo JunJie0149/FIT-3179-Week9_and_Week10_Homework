@@ -38,14 +38,14 @@
     ],
     "encoding": {
         "x": {
-            "field": "Value",
-            "type": "quantitative",
-            "title": "Electricity Consumption (TJ)"
-        },
-        "y": {
             "field": "Sector",
             "type": "nominal",
             "title": "Sector"
+        },
+        "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "title": "Electricity Consumption (TJ)"
         }
     },
     "layer": [
