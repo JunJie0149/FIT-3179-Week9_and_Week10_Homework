@@ -1,0 +1,116 @@
+﻿Sector,Value,Year,Units
+Industry,117439,2000, TJ
+Industry,122680,2001, TJ
+Industry,128066,2002, TJ
+Industry,135727,2003, TJ
+Industry,139845,2004, TJ
+Industry,141134,2005, TJ
+Industry,145494,2006, TJ
+Industry,150163,2007, TJ
+Industry,154364,2008, TJ
+Industry,179272,2009, TJ
+Industry,189773,2010, TJ
+Industry,185792,2011, TJ
+Industry,203939,2012, TJ
+Industry,216507,2013, TJ
+Industry,212353,2014, TJ
+Industry,217702,2015, TJ
+Industry,243752,2016, TJ
+Industry,257274,2017, TJ
+Industry,274100,2018, TJ
+Industry,282526,2019, TJ
+Industry,267281,2020, TJ
+Industry,278673,2021, TJ
+Industry,288518,2022, TJ
+Transport,183,2000, TJ
+Transport,126,2001, TJ
+Transport,179,2002, TJ
+Transport,212,2003, TJ
+Transport,194,2004, TJ
+Transport,226,2005, TJ
+Transport,226,2006, TJ
+Transport,147,2007, TJ
+Transport,622,2008, TJ
+Transport,522,2009, TJ
+Transport,752,2010, TJ
+Transport,752,2011, TJ
+Transport,878,2012, TJ
+Transport,871,2013, TJ
+Transport,921,2014, TJ
+Transport,957,2015, TJ
+Transport,1227,2016, TJ
+Transport,1651,2017, TJ
+Transport,1734,2018, TJ
+Transport,1719,2019, TJ
+Transport,1404,2020, TJ
+Transport,1256,2021, TJ
+Transport,917,2022, TJ
+Residential,40820,2000, TJ
+Residential,45277,2001, TJ
+Residential,48600,2002, TJ
+Residential,52264,2003, TJ
+Residential,55224,2004, TJ
+Residential,58406,2005, TJ
+Residential,63410,2006, TJ
+Residential,66891,2007, TJ
+Residential,69814,2008, TJ
+Residential,75009,2009, TJ
+Residential,81097,2010, TJ
+Residential,82479,2011, TJ
+Residential,89009,2012, TJ
+Residential,94701,2013, TJ
+Residential,98222,2014, TJ
+Residential,103456,2015, TJ
+Residential,112132,2016, TJ
+Residential,109283,2017, TJ
+Residential,106893,2018, TJ
+Residential,113652,2019, TJ
+Residential,130788,2020, TJ
+Residential,132889,2021, TJ
+Residential,132862,2022, TJ
+Commercial and public services,61894,2000, TJ
+Commercial and public services,66117,2001, TJ
+Commercial and public services,71110,2002, TJ
+Commercial and public services,76107,2003, TJ
+Commercial and public services,82843,2004, TJ
+Commercial and public services,90950,2005, TJ
+Commercial and public services,95331,2006, TJ
+Commercial and public services,104486,2007, TJ
+Commercial and public services,108755,2008, TJ
+Commercial and public services,114825,2009, TJ
+Commercial and public services,126442,2010, TJ
+Commercial and public services,132555,2011, TJ
+Commercial and public services,139212,2012, TJ
+Commercial and public services,145126,2013, TJ
+Commercial and public services,149302,2014, TJ
+Commercial and public services,153374,2015, TJ
+Commercial and public services,159764,2016, TJ
+Commercial and public services,157511,2017, TJ
+Commercial and public services,165731,2018, TJ
+Commercial and public services,171063,2019, TJ
+Commercial and public services,145719,2020, TJ
+Commercial and public services,144151,2021, TJ
+Commercial and public services,167115,2022, TJ
+Agriculture / forestry,,2000, TJ
+Agriculture / forestry,,2001, TJ
+Agriculture / forestry,,2002, TJ
+Agriculture / forestry,,2003, TJ
+Agriculture / forestry,,2004, TJ
+Agriculture / forestry,,2005, TJ
+Agriculture / forestry,,2006, TJ
+Agriculture / forestry,,2007, TJ
+Agriculture / forestry,813,2008, TJ
+Agriculture / forestry,882,2009, TJ
+Agriculture / forestry,1004,2010, TJ
+Agriculture / forestry,1087,2011, TJ
+Agriculture / forestry,1256,2012, TJ
+Agriculture / forestry,1350,2013, TJ
+Agriculture / forestry,1508,2014, TJ
+Agriculture / forestry,1695,2015, TJ
+Agriculture / forestry,1958,2016, TJ
+Agriculture / forestry,2102,2017, TJ
+Agriculture / forestry,2223,2018, TJ
+Agriculture / forestry,2390,2019, TJ
+Agriculture / forestry,2477,2020, TJ
+Agriculture / forestry,2470,2021, TJ
+Agriculture / forestry,1804,2022, TJ

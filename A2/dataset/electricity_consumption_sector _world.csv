@@ -1,0 +1,162 @@
+﻿Sector,Value,Year,Units
+Industry,19363669,2000, TJ
+Industry,19367060,2001, TJ
+Industry,19405926,2002, TJ
+Industry,20320990,2003, TJ
+Industry,21477707,2004, TJ
+Industry,22544206,2005, TJ
+Industry,23819085,2006, TJ
+Industry,25232876,2007, TJ
+Industry,25314699,2008, TJ
+Industry,24433971,2009, TJ
+Industry,26793553,2010, TJ
+Industry,28344308,2011, TJ
+Industry,29034388,2012, TJ
+Industry,29952976,2013, TJ
+Industry,31100729,2014, TJ
+Industry,30685482,2015, TJ
+Industry,31328536,2016, TJ
+Industry,32691850,2017, TJ
+Industry,34130492,2018, TJ
+Industry,34395194,2019, TJ
+Industry,34451767,2020, TJ
+Industry,37062461,2021, TJ
+Industry,37468861,2022, TJ
+Transport,779898,2000, TJ
+Transport,790009,2001, TJ
+Transport,821709,2002, TJ
+Transport,866063,2003, TJ
+Transport,884173,2004, TJ
+Transport,890951,2005, TJ
+Transport,908883,2006, TJ
+Transport,940552,2007, TJ
+Transport,925895,2008, TJ
+Transport,915439,2009, TJ
+Transport,975511,2010, TJ
+Transport,1040950,2011, TJ
+Transport,1057551,2012, TJ
+Transport,1081064,2013, TJ
+Transport,1092612,2014, TJ
+Transport,1111286,2015, TJ
+Transport,1173596,2016, TJ
+Transport,1233987,2017, TJ
+Transport,1337782,2018, TJ
+Transport,1385933,2019, TJ
+Transport,1315018,2020, TJ
+Transport,1489469,2021, TJ
+Transport,1623476,2022, TJ
+Residential,12816979,2000, TJ
+Residential,13125559,2001, TJ
+Residential,13593525,2002, TJ
+Residential,14059741,2003, TJ
+Residential,14475242,2004, TJ
+Residential,15146743,2005, TJ
+Residential,15555673,2006, TJ
+Residential,16195645,2007, TJ
+Residential,16521255,2008, TJ
+Residential,16910506,2009, TJ
+Residential,17890139,2010, TJ
+Residential,18009158,2011, TJ
+Residential,18439700,2012, TJ
+Residential,19051306,2013, TJ
+Residential,19342948,2014, TJ
+Residential,19731073,2015, TJ
+Residential,20411169,2016, TJ
+Residential,20818337,2017, TJ
+Residential,21616639,2018, TJ
+Residential,21911893,2019, TJ
+Residential,22765620,2020, TJ
+Residential,23568369,2021, TJ
+Residential,24303169,2022, TJ
+Commercial and public services,10696467,2000, TJ
+Commercial and public services,11068138,2001, TJ
+Commercial and public services,11379691,2002, TJ
+Commercial and public services,11674497,2003, TJ
+Commercial and public services,12204204,2004, TJ
+Commercial and public services,12942387,2005, TJ
+Commercial and public services,13405226,2006, TJ
+Commercial and public services,14019541,2007, TJ
+Commercial and public services,14429086,2008, TJ
+Commercial and public services,14527420,2009, TJ
+Commercial and public services,15104167,2010, TJ
+Commercial and public services,15189998,2011, TJ
+Commercial and public services,15572360,2012, TJ
+Commercial and public services,15884647,2013, TJ
+Commercial and public services,15996301,2014, TJ
+Commercial and public services,16409040,2015, TJ
+Commercial and public services,16770261,2016, TJ
+Commercial and public services,16998317,2017, TJ
+Commercial and public services,17458604,2018, TJ
+Commercial and public services,17622699,2019, TJ
+Commercial and public services,16521631,2020, TJ
+Commercial and public services,17611744,2021, TJ
+Commercial and public services,18019416,2022, TJ
+Agriculture / forestry,1199799,2000, TJ
+Agriculture / forestry,1209291,2001, TJ
+Agriculture / forestry,1367252,2002, TJ
+Agriculture / forestry,1426545,2003, TJ
+Agriculture / forestry,1473708,2004, TJ
+Agriculture / forestry,1485939,2005, TJ
+Agriculture / forestry,1563242,2006, TJ
+Agriculture / forestry,1609731,2007, TJ
+Agriculture / forestry,1639896,2008, TJ
+Agriculture / forestry,1692704,2009, TJ
+Agriculture / forestry,1752770,2010, TJ
+Agriculture / forestry,1849977,2011, TJ
+Agriculture / forestry,1896222,2012, TJ
+Agriculture / forestry,1928338,2013, TJ
+Agriculture / forestry,2006885,2014, TJ
+Agriculture / forestry,2100539,2015, TJ
+Agriculture / forestry,2230788,2016, TJ
+Agriculture / forestry,2348157,2017, TJ
+Agriculture / forestry,2473266,2018, TJ
+Agriculture / forestry,2622328,2019, TJ
+Agriculture / forestry,2700979,2020, TJ
+Agriculture / forestry,2781435,2021, TJ
+Agriculture / forestry,2918592,2022, TJ
+Fishing,6378,2000, TJ
+Fishing,6328,2001, TJ
+Fishing,6500,2002, TJ
+Fishing,7390,2003, TJ
+Fishing,14512,2004, TJ
+Fishing,15449,2005, TJ
+Fishing,16196,2006, TJ
+Fishing,16796,2007, TJ
+Fishing,16603,2008, TJ
+Fishing,16211,2009, TJ
+Fishing,21919,2010, TJ
+Fishing,23541,2011, TJ
+Fishing,24690,2012, TJ
+Fishing,24688,2013, TJ
+Fishing,26178,2014, TJ
+Fishing,27397,2015, TJ
+Fishing,25073,2016, TJ
+Fishing,29376,2017, TJ
+Fishing,32647,2018, TJ
+Fishing,33191,2019, TJ
+Fishing,32345,2020, TJ
+Fishing,34129,2021, TJ
+Fishing,35738,2022, TJ
+Other,637064,2000, TJ
+Other,619115,2001, TJ
+Other,1277793,2002, TJ
+Other,1408066,2003, TJ
+Other,1444260,2004, TJ
+Other,1443720,2005, TJ
+Other,1575375,2006, TJ
+Other,1668691,2007, TJ
+Other,1806563,2008, TJ
+Other,1761264,2009, TJ
+Other,1844809,2010, TJ
+Other,1956793,2011, TJ
+Other,2169761,2012, TJ
+Other,2405287,2013, TJ
+Other,2617985,2014, TJ
+Other,2845339,2015, TJ
+Other,3231592,2016, TJ
+Other,3531035,2017, TJ
+Other,3436158,2018, TJ
+Other,3451312,2019, TJ
+Other,3562739,2020, TJ
+Other,3654194,2021, TJ
+Other,4107486,2022, TJ
