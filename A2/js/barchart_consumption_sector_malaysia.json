@@ -6,36 +6,6 @@
     "width": 500,
     "height": 500,
     "padding": 10,
-    "params": [
-        {
-            "name": "sector_selection",
-            "bind": {
-                "input": "select",
-                "options": [
-                    null, "Industry", "Transport", "Residential", "Commercial and public services", "Agriculture / forestry"
-                ],
-                "labels": [
-                    "Show All", "Industry", "Transport", "Residential", "Commercial and public services", "Agriculture / forestry"
-                ],
-                "name": "Sectors: "
-            }
-        },
-        {
-            "name": "year_selection",
-            "value": 0,
-            "bind": {
-                "input": "range",
-                "min": 2000,
-                "max": 2022,
-                "step": 1,
-                "name": "Year: "
-            }
-        }
-    ],
-    "transform": [
-        {"filter": "sector_selection == null || datum.Sector == sector_selection"},
-        {"filter": "datum.Year >= year_selection"}
-    ],
     "encoding": {
         "x": {
             "field": "Sector",
