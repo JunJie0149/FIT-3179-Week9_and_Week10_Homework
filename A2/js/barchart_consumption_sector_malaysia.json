@@ -3,14 +3,20 @@
     "data": {
         "url":"https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/A2/dataset/electricity_consumption_sector_malaysia.csv"
     },
-    "width": 500,
+    "width": 800,
     "height": 500,
     "padding": 10,
     "encoding": {
         "x": {
-            "field": "Sector",
-            "type": "nominal",
-            "title": "Sector"
+            "field": "Year",
+            "type": "quantitative",
+            "title": "Year",
+            "scale": {
+                "domain": [1999, 2023]
+            },
+            "axis": {
+                "format": "f"
+            }
         },
         "y": {
             "field": "Value",
@@ -20,7 +26,9 @@
     },
     "layer": [
         {
-            "mark": "bar",
+            "mark": {
+                "type": "bar", "size": 20
+            },
             "encoding": {
                 "color": {
                     "field": "Sector",
