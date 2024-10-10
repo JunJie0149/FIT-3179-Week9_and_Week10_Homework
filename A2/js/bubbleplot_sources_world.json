@@ -42,6 +42,9 @@
             "type": "quantitative",
             "scale": {
                 "domain": [1999, 2023]
+            },
+            "axis": {
+                "format": "f"
             }
         },
         "y": {
