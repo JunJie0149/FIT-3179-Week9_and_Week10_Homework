@@ -3,33 +3,43 @@
     "data": {
         "url":"https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/A2/dataset/electricity_consumption_sector_malaysia.csv"
     },
-    "width": 800,
+    "width": 500,
     "height": 500,
-    "padding": 10,
-    "encoding": {
-        "x": {
-            "field": "Year",
-            "type": "quantitative",
-            "title": "Year",
-            "scale": {
-                "domain": [1999, 2023]
-            },
-            "axis": {
-                "format": "f"
+    "params": [
+        {
+            "name": "year_selection",
+            "value": 2000,
+            "bind": {
+                "input": "range",
+                "min": 2000,
+                "max": 2022,
+                "step": 1,
+                "name": "Year: "
             }
         },
-        "y": {
-            "field": "Value",
-            "type": "quantitative",
-            "title": "Electricity Consumption (TJ)"
+        {
+            "name": "point_selection",
+            "select": {
+                "type": "point",
+                "on": "mouseover",
+                "fields": ["Sector"],
+                "clear": "mouseout"
+            }
         }
-    },
+    ],
+    "transform": [
+        {"filter": "datum.Year == year_selection"}
+    ],
     "layer": [
         {
             "mark": {
-                "type": "bar", "size": 20
+                "type": "arc",
+                "strokeWidth": 3
             },
             "encoding": {
+                "theta": {
+                    "field": "Value", "type": "quantitative", "stack" : true
+                },
                 "color": {
                     "field": "Sector",
                     "type": "nominal",
@@ -47,7 +57,16 @@
                     {"field": "Sector", "type": "nominal", "title": "Sector"},
                     {"field": "Year", "type": "quantitative"},
                     {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Consumed (TJ)"}
-                ]
+                ],
+                "stroke": {
+                    "condition": {
+                        "test": {
+                            "param": "point_selection",
+                            "empty": false
+                        },
+                        "value": "black"
+                    }
+                }
             }
         }
     ]
