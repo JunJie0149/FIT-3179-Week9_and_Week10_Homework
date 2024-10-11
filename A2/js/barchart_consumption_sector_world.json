@@ -1,0 +1,68 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url":"https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/A2/dataset/electricity_consumption_sector_world.csv"
+    },
+    "width": 500,
+    "height": 500,
+    "padding": 10,
+    "params": [
+        {
+            "name": "sector_highlight",
+            "select": {
+                "type": "point",
+                "fields": ["Sector"]
+            },
+            "bind": "legend"
+        }
+    ],
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "quantitative",
+            "title": "Year",
+            "scale": {
+                "domain": [1999, 2023]
+            },
+            "axis": {
+                "format": "f"
+            }
+        },
+        "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "title": "Electricity Consumption (TJ)"
+        }
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "bar" ,"size": 18
+            },
+            "encoding": {
+                "color": {
+                    "field": "Sector",
+                    "type": "nominal",
+                    "title": "Sectors",
+                    "scale": {
+                        "domain": [
+                            "Industry", "Transport", "Residential", "Commercial and public services", "Agriculture / forestry", "Fishing", "Other"
+                        ],
+                        "range": [
+                            "#225ea8", "#e31a1c", "#feb24c", "#c994c7", "#ae017e", "#4a1486", "#7fcdbb"
+                        ]
+                    }
+                },
+                "opacity": {
+                    "condition": {"param": "sector_highlight", "value": 1.0},
+                    "value": 0.2
+                },
+                "tooltip": [
+                    {"field": "Sector", "type": "nominal", "title": "Sector"},
+                    {"field": "Year", "type": "quantitative"},
+                    {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Consumed (TJ)"}
+                ]
+            }
+        }
+    ]
+}
