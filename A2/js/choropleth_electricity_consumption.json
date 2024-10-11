@@ -58,7 +58,7 @@
         }
     ],
     "projection": {
-        "type": "equirectangular",
+        "type": "equalEarth",
         "center": {"expr": "center_to"},
         "scale": {"expr": "zoom_level"}
     },
@@ -141,7 +141,7 @@
                     "type": "quantitative",
                     "scale": {
                         "type": "log",
-                        "scheme": "tealblues"
+                        "scheme": "oranges"
                     },
                     "title": "Electricity Consumption (KWh)"
                 },
