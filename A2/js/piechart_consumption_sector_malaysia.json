@@ -22,9 +22,15 @@
             "select": {
                 "type": "point",
                 "on": "mouseover",
-                "fields": ["Sector"],
-                "clear": "mouseout"
+                "fields": ["Sector"]
             }
+        },
+        {
+            "name": "sector_highlight",
+            "select": {
+                "type": "point", "fields": ["Sector"]
+            },
+            "bind": "legend"
         }
     ],
     "transform": [
@@ -53,6 +59,10 @@
                         ]
                     }
                 },
+                "opacity": {
+                        "condition": {"param": "sector_highlight", "value": 1.0},
+                        "value": 0.2
+                    },
                 "tooltip": [
                     {"field": "Sector", "type": "nominal", "title": "Sector"},
                     {"field": "Year", "type": "quantitative"},
