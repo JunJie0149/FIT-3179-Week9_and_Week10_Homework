@@ -3,29 +3,26 @@
     "title": "Electricity Consumption Around The World",
     "width": 800,
     "height": 400,
-    "config": {
-        "background": "lightcyan"
-    },
     "params": [
         {
             "name": "consumption_selection",
-            "value": 0,
+            "value": 100000,
             "bind": {
                 "input": "range",
                 "min": 100000,
-                "max": 6000000000,
+                "max": 400000000,
                 "step": 100000,
                 "name": "Electricity Consumption: "
             }
         },
         {
             "name": "zoom_level",
-            "value": 30000,
+            "value": 125,
             "bind": {
                 "input": "range",
-                "min": 3500,
-                "max": 60000,
-                "step": 100,
+                "min": 125,
+                "max": 500,
+                "step": 10,
                 "name": "Zoom: "
             }
         },
@@ -36,14 +33,14 @@
                 "input": "select",
                 "options": [
                     [0, 0],
-                    [48.275, -103.403],
-                    [-26.046, -61.936],
-                    [-26.461, 134.106],
-                    [1.688, 112.830],
-                    [7.226, 20.405],
-                    [26.185, 50.625],
-                    [48.741, 110.998],
-                    [57.761, 33.386]
+                    [-102, 50],
+                    [-55, -26],
+                    [167,-16],
+                    [102, 4],
+                    [36, 0],
+                    [57, 33],
+                    [138, 37],
+                    [26, 50]
                 ],
                 "labels": [
                     "Centre",
@@ -91,6 +88,16 @@
         },
         {
             "data": {
+                "url": "https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/A2/dataset/ne_50m_ocean.json",
+                "format": {"type": "topojson", "feature": "ne_50m_ocean"}
+            },
+            "mark": {
+                "type": "geoshape",
+                "fill": "skyblue"
+            }
+        },
+        {
+            "data": {
                 "url": "https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/A2/dataset/ne_110m.json",
                 "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
             },
@@ -118,7 +125,7 @@
                     },
                     "as": "geo"
                 },
-                {"filter": "datum.electricity_consumption == consumption_selection"}
+                {"filter": "datum.electricity_consumption >= consumption_selection"}
             ],
             "mark": {
                 "type": "geoshape",
@@ -135,7 +142,8 @@
                     "scale": {
                         "type": "log",
                         "scheme": "tealblues"
-                    }
+                    },
+                    "title": "Electricity Consumption (KWh)"
                 },
                 "tooltip": [
                     {"field": "countries", "type": "nominal", "title": "Country:"},
