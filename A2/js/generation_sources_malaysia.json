@@ -1,0 +1,82 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 500,
+    "title": "Electricity Consumption By Sector In Malaysia (2000 - 2022)",
+    "data": {
+    "url": "https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/Week10/dataset/electricity_generation_sources.csv"
+    },
+    "params": [
+        {
+            "name": "point_selection",
+            "select": {
+                "type": "point",
+                "on": "mouseover",
+                "fields": ["Source"]
+            }
+        },
+        {
+            "name": "source_highlight",
+            "select": {
+                "type": "point",
+                "fields": ["Source"]
+            },
+            "bind": "legend"
+        },
+        {
+            "name": "year_selection",
+            "value": 2000,
+            "bind": {
+                "input": "range",
+                "min": 2000,
+                "max": 2021,
+                "step": 1,
+                "name": "Year: "
+            }
+        }
+    ],
+    "transform": [
+        {"filter": "datum.Year == year_selection"}
+    ],
+    "layer": [
+        {
+            "mark": "arc",
+            "encoding": {
+                "theta": {
+                    "field": "Value", "type": "quantitative", "stack": true
+                },
+                "color": {
+                    "field": "Source",
+                    "type": "nominal",
+                    "title": "Sources",
+                    "scale": {
+                        "domain": [
+                            "Biofuels", "Coal", "Hydro", "Natural gas", "Oil", "Solar PV", "Waste"
+                        ],
+                        "range": [
+                            "#c994c7", "#e31a1c", "#feb24c", "#225ea8", "#ae017e", "#005824", "#8c96c6"
+                        ]
+                    }
+                },
+                "opacity": {
+                    "condition": {"param": "source_highlight", "value": 1.0},
+                    "value": 0.2
+                },
+                "tooltip": [
+                    {"field": "Source", "type": "nominal", "title": "Source"},
+                    {"field": "Year", "type": "quantitative"},
+                    {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Generated (GWh)"}
+                ],
+                "stroke": {
+                    "condition": {
+                        "test": {
+                            "param": "point_selection",
+                            "empty": false
+                        }, 
+                        "value": "black"
+                    }
+                }
+            }
+        }
+    ]
+}
