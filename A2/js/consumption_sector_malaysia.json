@@ -1,0 +1,105 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url":"https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/A2/dataset/electricity_consumption_sector_malaysia.csv"
+    },
+    "title": "Electricity Generation Sources In Malaysia (2000 - 2021)",
+    "width": 500,
+    "height": 500,
+    "params": [
+        {
+            "name": "year_selection",
+            "value": 2000,
+            "bind": {
+                "input": "range",
+                "min": 2000,
+                "max": 2022,
+                "step": 1,
+                "name": "Year: "
+            }
+        },
+        {
+            "name": "sector_selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null, "Industry", "Transport", "Residential", "Commercial and public services", "Agriculture / forestry"
+                ],
+                "labels": [
+                    "Show All", "Industry", "Transport", "Residential", "Commercial and public services", "Agriculture / forestry"
+                ],
+                "name": "Sector: "
+            }
+        },
+        {
+            "name": "sector_highlight",
+            "select": {
+                "type": "point", "fields": ["Sector"]
+            },
+            "bind": "legend"
+        }
+    ],
+    "transform": [
+        {"filter": "sector_selection == null || datum.Sector == sector_selection"},
+        {"filter": "datum.Year >= year_selection"}
+    ],
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "quantitative",
+            "scale": {
+                "domain": [1999, 2023]
+            },
+            "axis": {
+                "format": "f"
+            }
+        },
+        "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "title": "Electricity Generation (GWh)",
+            "scale": {
+                "domain": [1, 320000]
+            }
+        }
+    },
+    "layer": [
+        {
+            "mark": "circle",
+            "encoding": {
+                "color": {
+                    "field": "Sector",
+                    "type": "nominal",
+                    "title": "Sectors",
+                    "scale": {
+                        "domain": [
+                            "Industry", "Transport", "Residential", "Commercial and public services", "Agriculture / forestry"
+                        ],
+                        "range": [
+                            "#74a9cf", "#feb24c", "#e31a1c", "#034e7b", "#9e9ac8"
+                        ]
+                    }
+                },
+                "opacity": {"value": 0.6},
+                "size": {
+                    "field": "Value",
+                    "type": "quantitative",
+                    "title": "Terajoule (TJ)",
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [1000, 10000, 80000, 100000, 320000],
+                        "range": [50, 150, 200, 400, 600]
+                    },
+                    "legend": {
+                        "format": ".1s"
+                    }
+                },
+                "tooltip": [
+                    {"field": "Sector", "type": "nominal", "title": "Sector"},
+                    {"field": "Year", "type": "quantitative"},
+                    {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Consumed (TJ)"}
+                ]
+            }
+        }
+    ]
+}
