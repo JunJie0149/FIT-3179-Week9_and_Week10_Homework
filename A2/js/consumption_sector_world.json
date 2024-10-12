@@ -3,6 +3,7 @@
     "data": {
         "url":"https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/A2/dataset/electricity_consumption_sector_world.csv"
     },
+    "title": "Electricity Cosumption By Sector (World)",
     "width": 500,
     "height": 500,
     "padding": 10,
@@ -29,9 +30,9 @@
             }
         },
         "y": {
-            "field": "Value",
-            "type": "quantitative",
-            "title": "Electricity Consumption (TJ)"
+            "aggregate": "sum", "field": "Value",
+            "axis" : null,
+            "stack": "center"
         }
     },
     "layer": [
@@ -42,8 +43,6 @@
             "encoding": {
                 "color": {
                     "field": "Sector",
-                    "type": "nominal",
-                    "title": "Sectors",
                     "scale": {
                         "domain": [
                             "Industry", "Transport", "Residential", "Commercial and public services", "Agriculture / forestry", "Fishing", "Other"
