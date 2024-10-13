@@ -31,7 +31,7 @@
 
     <h1>Electricity Consumption by Sector (Malaysia)</h1>
         <div class = "column1"
-            <div id = "linechart_world"></div>
+            <div id = "linechart_malaysia"></div>
         </div>
 
     <h1>Electricity Consumption by Sector (World)</h1>
@@ -42,7 +42,7 @@
     
     <script type = "text/javascript">
         
-        var spec1 = "A2/js/choroplethmap.json";
+        var spec1 = "A2/js/choropleth_electricity_consumption.json";
         vegaEmbed("#choroplethmap", spec1).then(function (result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
@@ -58,7 +58,7 @@
             }).catch(console.error);
 
         var spec4 = "A2/js/consumption_sector_malaysia.json";
-            vegaEmbed("#linechart_world", spec4).then(function (result) {
+            vegaEmbed("#linechart_malaysia", spec4).then(function (result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
 
