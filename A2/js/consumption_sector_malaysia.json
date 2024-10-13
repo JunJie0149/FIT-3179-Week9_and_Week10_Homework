@@ -30,13 +30,6 @@
                 ],
                 "name": "Sector: "
             }
-        },
-        {
-            "name": "sector_highlight",
-            "select": {
-                "type": "point", "fields": ["Sector"]
-            },
-            "bind": "legend"
         }
     ],
     "transform": [
@@ -59,13 +52,16 @@
             "type": "quantitative",
             "title": "Electricity Generation (GWh)",
             "scale": {
-                "domain": [1, 320000]
+                "domain": [1, 300000]
             }
         }
     },
     "layer": [
         {
-            "mark": "circle",
+            "mark": {
+                "type": "line",
+                "point": true
+            },
             "encoding": {
                 "color": {
                     "field": "Sector",
@@ -78,20 +74,6 @@
                         "range": [
                             "#74a9cf", "#feb24c", "#e31a1c", "#034e7b", "#9e9ac8"
                         ]
-                    }
-                },
-                "opacity": {"value": 0.6},
-                "size": {
-                    "field": "Value",
-                    "type": "quantitative",
-                    "title": "Terajoule (TJ)",
-                    "scale": {
-                        "type": "threshold",
-                        "domain": [1000, 10000, 80000, 100000, 320000],
-                        "range": [50, 150, 200, 400, 600]
-                    },
-                    "legend": {
-                        "format": ".1s"
                     }
                 },
                 "tooltip": [
