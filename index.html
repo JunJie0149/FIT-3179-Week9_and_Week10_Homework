@@ -21,41 +21,52 @@
 
     <h1>Electricity Generation Sources in Malaysia</h1>
         <div class = "column1" 
-            <div id = "bubbleplot_malaysia"></div>
+            <div id = "piechart_malaysia"></div>
         </div>
 
     <h1>Electricity Generation Sources (World)</h1>
         <div class = "column1"
-            <div id = "bubbleplot_world"></div>
+            <div id = "linechart_world"></div>
         </div>
 
     <h1>Electricity Consumption by Sector (Malaysia)</h1>
         <div class = "column1"
-            <div id = "barchart_world"></div>
+            <div id = "linechart_world"></div>
+        </div>
+
+    <h1>Electricity Consumption by Sector (World)</h1>
+        <div class = "column1" 
+            <div id = "streamgraph_world"></div>
         </div>
     </div>
     
     <script type = "text/javascript">
         
-        var spec1 = "Week9/js/choroplethmap.json";
+        var spec1 = "A2/js/choroplethmap.json";
         vegaEmbed("#choroplethmap", spec1).then(function (result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
         
-        var spec2 = "A2/js/bubbleplot_sources_malaysia.json";
-        vegaEmbed("#bubbleplot_malaysia", spec2).then(function (result) {
+        var spec2 = "A2/js/generation_sources_malaysia.json";
+        vegaEmbed("#piechart_malaysia", spec2).then(function (result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
 
-        var spec3 = "A2/js/bubbleplot_sources_world.json";
-            vegaEmbed("#bubbleplot_world", spec3).then(function (result) {
+        var spec3 = "A2/js/generation_sources_world.json";
+            vegaEmbed("#linechart_world", spec3).then(function (result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
 
-        var spec4 = "A2/js/barchart_consumption_sector_malaysia.json";
-            vegaEmbed("#barchart_world", spec4).then(function (result) {
+        var spec4 = "A2/js/consumption_sector_malaysia.json";
+            vegaEmbed("#linechart_world", spec4).then(function (result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);
+
+        var spec5 = "A2/js/consumption_sector_world.json";
+            vegaEmbed("#streamgraph_world", spec5).then(function (result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+
     </script>
 </body>
 
