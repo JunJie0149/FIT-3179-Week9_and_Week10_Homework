@@ -52,15 +52,10 @@
             "type": "quantitative",
             "title": "Electricity Generation (GWh)",
             "scale": {
-                "domain": [1, 12000000]
+                "domain": [1, 11000000]
             }
-        }
-    },
-    "layer": [
-        {
-            "mark": "circle",
-            "encoding": {
-                "color": {
+        },
+        "color": {
                     "field": "Sources",
                     "type": "nominal",
                     "title": "Sources",
@@ -73,26 +68,14 @@
                         ]
                     }
                 },
-                "opacity": {"value": 0.6},
-                "size": {
-                    "field": "Value",
-                    "type": "quantitative",
-                    "title": "Gigawatt Hour (GWh)",
-                    "scale": {
-                        "type": "threshold",
-                        "domain": [10, 1000, 100000, 1000000, 12000000],
-                        "range": [50, 100, 200, 400, 600]
-                    },
-                    "legend": {
-                        "format": ".1s"
-                    }
-                },
                 "tooltip": [
                     {"field": "Sources", "type": "nominal", "title": "Source"},
                     {"field": "Year", "type": "quantitative"},
                     {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Generated (GWh)"}
                 ]
+    },
+    "mark": {
+                "type": "line",
+                "point": true
             }
-        }
-    ]
 }
