@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Electricity Consumption Around The World",
     "width": 800,
     "height": 400,
     "params": [

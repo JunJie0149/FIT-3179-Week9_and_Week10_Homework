@@ -2,7 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
     "height": 500,
-    "title": "Electricity Consumption By Sector In Malaysia (2000 - 2022)",
     "data": {
     "url": "https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/Week10/dataset/electricity_generation_sources.csv"
     },

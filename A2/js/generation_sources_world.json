@@ -2,7 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
     "height": 500,
-    "title": "Electricity Generation Sources Worldwide (2000 - 2022)",
     "data": {
     "url": "https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/A2/dataset/electricity_generation_sources_world.csv"
     },
@@ -64,7 +63,7 @@
                             "Biofuels", "Coal", "Hydro", "Natural gas", "Oil", "Solar PV", "Waste", "Nuclear", "Tide", "Wind", "Solar thermal", "Geothermal", "Other sources"
                         ],
                         "range": [
-                            "#225ea8", "#e31a1c", "#feb24c", "#c994c7", "#ae017e", "#005824", "#8c96c6", "#7a0177", "#4a1486", "#74c476", "#253494", "#7fcdbb", "#a50f15"
+                            "#c994c7", "#e31a1c", "#feb24c", "#225ea8", "#ae017e", "#005824", "#8c96c6", "#7a0177", "#4a1486", "#74c476", "#253494", "#7fcdbb", "#a50f15"
                         ]
                     }
                 },
