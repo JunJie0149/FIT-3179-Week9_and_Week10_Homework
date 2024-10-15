@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href = "css/style.css" />
+    <link rel="stylesheet" href = "A2/css/style.css" />
     <title>Electricity Across The World</title>
 
 </head>
@@ -20,79 +20,103 @@
     <div class="container">
 
         <!-- Title -->
-        <h1>Electricity Across The World</h1>
-        <p>
-            Electricity is essential for daily life, as majority of the activities performed daily requires access to electricity. As electricity consumption across the world
-            continues to rise, it is important to have a better understanding of which countries have the <b>highest consumption rate</b>, what <b>sources were used to generate electricity</b>
-            and which <b>sectors consumed the most electrical energy</b>.
-        </p>
+        <div class = "title">
+            <h1>Electricity Across The World</h1>
+            <p>
+                Electricity is essential for daily life, as majority of the activities performed daily requires access to
+                electricity. As electricity consumption across the world
+                continues to rise, it is important to have a better understanding of which countries have the <b>highest consumption
+                    rate</b>, what <b>sources were used to generate electricity</b>
+                and which <b>sectors consumed the most electrical energy</b>.
+            </p>
+        </div>
 
         <!-- Visualization 1 -->
-        <h2>Electricity Consumption Around The World</h2>
-        <p>
-            Throughout the years, <strong style = "color: blue;">China</strong> and <strong style = "color: blue;">United States of America (USA)</strong>
-            are the two countries with the highest elecctricity consumpiton, with over <strong style = "color: orangered;">5.56 billion</strong> and 
-            <strong style = "color: orangered;">3.90 billion</strong> of electricity consumed respectively. <b>Russia, India, Canada and Brazil</b> are
-            also among countries with high electricity consumption.
-        </p>
-        <div class = "column1" id = "choroplethmap"></div>
-        
+        <div class = "vis1-section">
+            <h2>Electricity Consumption Around The World</h2>
+            <div class = "vis1-container">
+                <p class="vis1-desription">
+                    Throughout the years, <strong style="color: blue;">China</strong> and <strong style="color: blue;">United States of America (USA)</strong>
+                    are the two countries with the highest elecctricity consumpiton, with over <strong style="color: orangered;">5.56 billion</strong> and
+                    <strong style="color: orangered;">3.90 billion</strong> of electricity consumed respectively. <b>Russia, India, Canada and Brazil</b> are
+                    also among countries with high electricity consumption.
+                </p>
+                <div class="vis1" id="choroplethmap"></div>
+            </div>
+        </div>
 
         <!-- Visualization 2 -->
-        <h2>Electricity Generation Sources in Malaysia</h2>
-        <p>
-            From <b>2000</b> to <b>2015</b>, <strong style="color: mediumblue;">Natural Gas</strong> was the main source to generate
-            electricity. However, from
-            <b>2016</b> to <b>2021</b>, <strong style="color: red;">Coal</strong> has become the main source for electricity
-            generation. The main reason for
-            this replacement might be due to <strong style="color: red;">Coal</strong> not only being a cheaper option as
-            importing <strong style="color: mediumblue;">Natural Gas</strong>
-            depends on international price fluctuations, but it also meets the electricity consumption demands reliably.
-            Throughout 2000 to 2021, electricity generated through
-            <strong style="color: orange;">Hydro</strong> power plants has increased significantly, as <b>Malaysia</b> is
-            working towards on replacing non-renewable energy sources with renewable energy sources
-            such as, <strong style="color: orange;">Hydro</strong>, <strong style="color: plum;">Biofuels</strong> and <strong
-                style="color: green;">Solar PV</strong>.
-        </p>
-        <div class = "column1" id = "piechart_malaysia"></div>
+        <div class = "vis2-section">
+            <h2>Electricity Generation Sources in Malaysia</h2>
+            <div class = "vis2-container">
+                <p class="vis2-description">
+                    From <b>2000</b> to <b>2015</b>, <strong style="color: mediumblue;">Natural Gas</strong> was the main source to
+                    generate electricity. However, from <b>2016</b> to <b>2021</b>, <strong style="color: red;">Coal</strong> has become
+                    the main source for electricity generation. <br> 
+                    The main reason for this replacement might be due to <strong style="color: red;">Coal</strong> not only being a cheaper option as
+                    importing <strong style="color: mediumblue;">Natural Gas</strong>
+                    depends on international price fluctuations, but it also meets the electricity consumption demands reliably. <br>
+                    Throughout 2000 to 2021, electricity generated through
+                    <strong style="color: orange;">Hydro</strong> power plants has increased significantly, as <b>Malaysia</b> is
+                    working towards on replacing non-renewable energy sources with renewable energy sources
+                    such as, <strong style="color: orange;">Hydro</strong>, <strong style="color: plum;">Biofuels</strong> and <strong
+                        style="color: green;">Solar PV</strong>.
+                </p>
+                <div class="vis2" id="piechart_malaysia"></div>
+            </div>
+        </div>
 
         <!-- Visualization 3 -->
-        <h2>Electricity Generation Sources (World)</h2>
-        <p>
-            Across the world between <b>2000</b> to <b>2022</b>, <strong style = "color: red;">Coal</strong>, <strong style = "color: mediumblue;">Natural Gas</strong> 
-            and <strong style="color: orange;">Hydro</strong> were the most common sources used to generate electricity, with were the same as <b>Malaysia</b>. <br><br>
-            From the year <b>2010</b> onwards, renewable energy sources such as <strong style="color: mediumseagreen;">Wind</strong>, <strong style="color: green;">Solar PV</strong>,
-            <strong style="color: plum;">Biofuels</strong> and <strong style="color: lightseagreen;">Geothermal</strong> saw an significant increase in usage for generating electricity
-            each year. The trend of switching to renewable energy might be due to several factors, with the primary one being the reduction of carbon emissions to combat air pollution, which ultimately
-            sparked the beginning of the change.
-        </p>
-        <div class = "column1" id = "linechart_world"></div>
+        <div class = "vis3-section">
+            <h2>Electricity Generation Sources (World)</h2>
+            <div class = "vis3-container">
+                <p class="vis3-description">
+                    Across the world between <b>2000</b> to <b>2022</b>, <strong style="color: red;">Coal</strong>, <strong style="color: mediumblue;">Natural Gas</strong>
+                    and <strong style="color: orange;">Hydro</strong> were the most common sources used to generate electricity, which were the same as <b>Malaysia</b>. <br>
+                    From the year <b>2010</b> onwards, renewable energy sources such as <strong style="color: mediumseagreen;">Wind</strong>, <strong style="color: green;">Solar PV</strong>,
+                    <strong style="color: plum;">Biofuels</strong> and <strong style="color: lightseagreen;">Geothermal</strong> saw an significant increase in usage for generating electricity
+                    each year. The trend of switching to renewable energy might be due to several factors, with the primary one being the reduction of carbon emissions to combat air pollution,
+                    which ultimately sparked the beginning of the change.
+                </p>
+                <div class="vis3" id="linechart_world"></div>
+            </div>
+        </div>
 
         <!-- Visualization 4 -->
-        <h2>Electricity Consumption by Sector (Malaysia)</h2>
-        <p>
-            Between <b>2000</b> and <b>2022</b>, sectors in <b>Malaysia</b> that consumed the most amount of electricity are <strong style="color: dodgerblue;">Industry</strong>,
-            <strong style="color: navy;">Commercial and Public Services</strong> and <strong style="color: red;">Residential</strong>. <br> <br>
-            From <b>2019</b> to <b>2020</b>, the <strong style="color: dodgerblue;">Industry</strong> and <strong style="color: navy;">Commercial and Public Services</strong>
-            sector experienced a drastic decline in the electricity consumed, as this is mainly due to a pandemic in <b>2020</b>, which has affected the entire world. However, for
-            the <strong style="color: red;">Residential</strong> sector, it has seen a significant increase as majority of the citizen stayed at home due to the restrictions set by
-            the government.
-        </p>
-        <div class = "column1" id = "linechart_malaysia"></div>
+        <div class = "vis4-section">
+            <h2>Electricity Consumption by Sector (Malaysia)</h2>
+            <div class = "vis4-container">
+                <p class = "vis4-description">
+                    Between <b>2000</b> and <b>2022</b>, sectors in <b>Malaysia</b> that consumed the most amount of electricity are <strong style="color: dodgerblue;">Industry</strong>,
+                    <strong style="color: navy;">Commercial and Public Services</strong> and <strong style="color: red;">Residential</strong>. <br>
+                    From <b>2019</b> to <b>2020</b>, the <strong style="color: dodgerblue;">Industry</strong> and <strong style="color: navy;">Commercial and Public Services</strong>
+                    sector experienced a drastic decline in the electricity consumed, as this is mainly due to a pandemic in <b>2020</b>, which has affected the entire world. However, for
+                    the <strong style="color: red;">Residential</strong> sector, it has seen a significant increase as majority of the citizen stayed at home due to the restrictions set by
+                    the government.
+                </p>
+                <div class="vis4" id="linechart_malaysia"></div>
+            </div>
+        </div>
 
         <!-- Visualization 5 -->
-        <h2>Electricity Consumption by Sector (World)</h2>
-        <p>
-            Similarly to <b>Malaysia</b>, the sectors consuming the highest amnount of electricity remain the same. However, the drop-off from <b>2019</b> to <b>2020</b> was not that significant, possibly
-            due to several factors. One such factor is the government's quick adaptation in implementing policies during the pandemic to ensure that essential services such as <b>hospitals</b>, 
-            <b>data centers</b> and <b>infrastructure</b> could continue operating.
-        </p>
-        <div class = "column1" id = "streamgraph_world"></div>
+        <div class = "vis5-section">
+            <h2>Electricity Consumption by Sector (World)</h2>
+            <div class = "vis5-container">
+                <div class="vis5" id="streamgraph_world"></div>
+                <p class = "vis5-description">
+                    Similarly to <b>Malaysia</b>, the sectors consuming the highest amnount of electricity remain the same. However, the
+                    drop-off from <b>2019</b> to <b>2020</b> was not that significant, possibly
+                    due to several factors. One such factor is the government's quick adaptation in implementing policies during the
+                    pandemic to ensure that essential services such as <b>hospitals</b>,
+                    <b>data centers</b> and <b>infrastructure</b> could continue operating.
+                </p>
+            </div>
+        </div>
 
         <br>
         <br>
         <br>
-        <div class = "column1">
+        <div class = "end">
             <p>
                 &copy; 2024 Chai Jun Jie. All Rights Reserved. <br>
                 References: <br>
