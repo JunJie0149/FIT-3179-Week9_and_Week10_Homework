@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
+    "width": 680,
     "height": 400,
     "params": [
         {
@@ -142,7 +142,7 @@
                         "type": "log",
                         "scheme": "oranges"
                     },
-                    "title": "Electricity Consumption (KWh)"
+                    "title": "Consumption (KWh)"
                 },
                 "tooltip": [
                     {"field": "countries", "type": "nominal", "title": "Country:"},
