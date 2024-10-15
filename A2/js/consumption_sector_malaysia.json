@@ -3,8 +3,8 @@
     "data": {
         "url":"https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/A2/dataset/electricity_consumption_sector_malaysia.csv"
     },
-    "width": 500,
-    "height": 500,
+    "width": 450,
+    "height": 400,
     "params": [
         {
             "name": "year_selection",
@@ -79,6 +79,35 @@
                     {"field": "Sector", "type": "nominal", "title": "Sector"},
                     {"field": "Year", "type": "quantitative"},
                     {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Consumed (TJ)"}
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "dx": -12,
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "text": {
+                    "field": "Sector", 
+                    "type": "nominal"
+                },
+                "color": {"value": "black"},
+                "opacity": {
+                    "condition": {
+                        "test": "datum.Year == 2020 && datum.Sector == 'Industry' || datum.Year == 2020 && datum.Sector == 'Commercial and public services' || datum.Year == 2020 && datum.Sector == 'Residential'",
+                        "value": 1
+                    },
+                    "value": 0
+                },
+                "tooltip": [
+                    {"field": "Sector", "type": "nominal", "title": "Sector"},
+                    {"field": "Year", "type": "quantitative"},
+                    {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Generated (GWh)"}
                 ]
             }
         }
