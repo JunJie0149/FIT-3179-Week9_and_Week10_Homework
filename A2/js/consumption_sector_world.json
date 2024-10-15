@@ -3,8 +3,8 @@
     "data": {
         "url":"https://raw.githubusercontent.com/JunJie0149/FIT-3179-Week9_and_Week10_Homework/refs/heads/main/A2/dataset/electricity_consumption_sector_world.csv"
     },
-    "width": 500,
-    "height": 500,
+    "width": 580,
+    "height": 400,
     "padding": 10,
     "params": [
         {
