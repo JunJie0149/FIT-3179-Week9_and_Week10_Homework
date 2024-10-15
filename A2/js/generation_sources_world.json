@@ -73,8 +73,41 @@
                     {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Generated (GWh)"}
                 ]
     },
-    "mark": {
+    "layer": [
+        {
+            "mark": {
                 "type": "line",
                 "point": true
             }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "dx": -12,
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "text": {
+                    "field": "Sources", 
+                    "type": "nominal"
+                },
+                "color": {"value": "black"},
+                "opacity": {
+                    "condition": {
+                        "test": "datum.Year == 2010 && datum.Sources == 'Wind' || datum.Year == 2020 && datum.Sources == 'Wind' || datum.Year == 2017 && datum.Sources == 'Solar PV' || datum.Year == 2022 && datum.Sources == 'Solar PV' || datum.Year == 2010 && datum.Sources == 'Hydro' || datum.Year == 2020 && datum.Sources == 'Hydro'",
+                        "value": 1
+                    },
+                    "value": 0
+                },
+                "tooltip": [
+                    {"field": "Sources", "type": "nominal", "title": "Source"},
+                    {"field": "Year", "type": "quantitative"},
+                    {"field": "Value", "type": "quantitative", "format": ",", "title": "Electricity Generated (GWh)"}
+                ]
+            }
+        }
+    ]
 }
